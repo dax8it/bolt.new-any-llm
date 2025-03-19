@@ -23,7 +23,9 @@ const PROVIDER_LIST: ProviderInfo[] = [
   },
   {
     name: 'Ollama',
-    staticModels: [],
+    staticModels: [
+      { name: 'gemma-3-27b-it', label: 'Gemma 3 27B IT', provider: 'Ollama' }
+    ],
     getDynamicModels: getOllamaModels,
     getApiKeyLink: "https://ollama.com/download",
     labelForGetApiKey: "Download Ollama",
@@ -57,7 +59,7 @@ const PROVIDER_LIST: ProviderInfo[] = [
   }, {
     name: 'Google',
     staticModels: [
-      { name: 'gemini-1.5-flash-latest', label: 'Gemini 1.5 Flash', provider: 'Google' },
+      { name: 'gemini-2.0-flash', label: 'Gemini 2.0 Flash', provider: 'Google' },
       { name: 'gemini-1.5-pro-latest', label: 'Gemini 1.5 Pro', provider: 'Google' }
     ],
     getApiKeyLink: 'https://aistudio.google.com/app/apikey'
